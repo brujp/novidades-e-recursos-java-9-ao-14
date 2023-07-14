@@ -2,20 +2,28 @@ package br.com.alura.switchexpression;
 
 public class Teste {
 
+	//Utilizando Lambda para reduzir a verbosidade do switch case
 	public static void main(String[] args) {
+
 		String nome = "João";
 		switch (nome) {
-		case "Renata": {
-			System.out.println("Acertou: " + nome);
-			break;
+			case "Renata" -> System.out.println("Acertou: " + nome);
+			case "João" -> System.out.println("Acertou: " + nome);
+			default -> System.out.println("Nenhum nome encontrado!!");
 		}
-		case "João": {
-			System.out.println("Acertou: " + nome);
-			break;
+
+//		case "Renata": {
+//			System.out.println("Acertou: " + nome);
+//			break;
+//		}
+//		case "João": {
+//			System.out.println("Acertou: " + nome);
+//			break;
+//		}
+//		default: {
+//			System.out.println("Nenhum nome encontrado!!");
+//		}
+//		}
+
 		}
-		default: {
-			System.out.println("Nenhum nome encontrado!!");
-		}
-		}
-	}
 }
